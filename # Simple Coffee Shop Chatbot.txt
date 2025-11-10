@@ -1,0 +1,44 @@
+# Simple Coffee Shop Chatbot 
+ 
+def chatbot(): 
+    print("Hello! Welcome to CoffeeExpress       ") 
+    print("I am your assistant. I can help you place an order.") 
+     
+    name = input("May I know your name? ") 
+    print(f"Nice to meet you, {name}!") 
+ 
+    print("\nOur menu today:") 
+    print("1. Espresso - ₹100") 
+    print("2. Cappuccino - ₹150") 
+    print("3. Latte - ₹120") 
+    print("4. Tea - ₹80") 
+ 
+    order = input("What would you like to order? (Type the name) ").lower() 
+     
+    # Simple menu price dictionary 
+    menu = { 
+        "espresso": 100, 
+        "cappuccino": 150, 
+        "latte": 120, 
+        "tea": 80 
+    } 
+     
+    if order in menu: 
+        quantity = input("How many cups would you like? ") 
+        if quantity.isdigit(): 
+            total = menu[order] * int(quantity) 
+            print(f"Great! Your total bill is ₹{total}.") 
+            print("Your order will be ready shortly. Thank you for visiting CoffeeExpress!       ") 
+        else: 
+            print("Please enter a valid number for quantity.") 
+    else: 
+        print("Sorry, we do not have that item on the menu.") 
+ 
+# Start the chatbot 
+chatbot() 
+ 
+ 
+ 
+ 
+ 
+ 
